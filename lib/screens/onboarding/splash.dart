@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/screens/introOne.dart';
+import 'package:movies_app/screens/onboarding/introOne.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
