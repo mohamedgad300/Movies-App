@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/Auth_Screen/Login_screen.dart';
 import 'package:movies_app/screens/Home_screen/home_screen.dart';
 
 class Introsix extends StatelessWidget {
@@ -36,14 +37,13 @@ class Introsix extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   const SizedBox(height: 20), // مسافة قبل الزرار
                   SizedBox(
                     width: 350,
                     height: 55,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
+                        Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFF6BD00), // اللون المطلوب

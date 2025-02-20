@@ -12,6 +12,8 @@ import 'package:movies_app/screens/onboarding/introTwo.dart';
 import 'package:movies_app/screens/onboarding/splash.dart';
 import 'package:provider/provider.dart';
 
+import 'core/Auth_Screen/Login_screen.dart';
+
 // تعريف جميع الـ Routes في متغير مستقل
 final Map<String, Widget Function(BuildContext)> appRoutes = {
   "IntroOne": (context) => const Introone(),
@@ -20,6 +22,7 @@ final Map<String, Widget Function(BuildContext)> appRoutes = {
   "IntroFour": (context) => const Introfour(),
   "IntroFive": (context) => const Introfive(),
   "IntroSix": (context) => const Introsix(),
+  LoginScreen.routeName: (context) => const LoginScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
   FilmDetails.routeName: (context) => FilmDetails(
     film: ModalRoute.of(context)!.settings.arguments as FilmModel, // هنا تمرير الـ FilmModel
