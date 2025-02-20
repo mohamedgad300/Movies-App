@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/Auth_Screen/repassword_screen.dart';
+import 'package:movies_app/core/Auth_Screen/signin_screen.dart';
 import '../../services/custom_form_Filed.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
   static const String routeName = "login";
-
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width; // عرض الشاشة
-    double buttonWidth = screenWidth * 0.95; // تحديد عرض الزر ليكون 95% من عرض الشاشة
-
+    double screenWidth = MediaQuery.of(context).size.width; //
+    double buttonWidth = screenWidth * 0.95;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05), // هوامش جانبية 5%
+          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
                 prefixIcon: Icons.email,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               CustomFormField(
                 labelText: "Password",
@@ -40,7 +40,9 @@ class LoginScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(rePassword.routeName);
+                  },
                   child: const Text(
                     "Forget Password?",
                     style: TextStyle(color: Color(0xFFF6BD00)),
@@ -51,13 +53,15 @@ class LoginScreen extends StatelessWidget {
 
               FilledButton(
                 style: FilledButton.styleFrom(
-                  minimumSize: Size(buttonWidth, 55), // جعل الزر 95% من عرض الشاشة
+                  minimumSize: Size(buttonWidth, 55),
                   backgroundColor: const Color(0xFFF6BD00),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  ///z/z/z/z/z/z/zz//z/z/z/z/
+                },
                 child: const Text("Login", style: TextStyle(color: Colors.black)),
               ),
               const SizedBox(height: 20),
@@ -67,7 +71,9 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const Text("Don't have an account?", style: TextStyle(color: Colors.white)),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(signin.routeName);
+                    },
                     child: const Text(
                       "Create one",
                       style: TextStyle(color: Color(0xFFF6BD00)),
@@ -110,16 +116,17 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-
               FilledButton(
                 style: FilledButton.styleFrom(
-                  minimumSize: Size(buttonWidth, 55), // جعل الزر 95% من عرض الشاشة
+                  minimumSize: Size(buttonWidth, 55),
                   backgroundColor: const Color(0xFFF6BD00),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  ////z/z/z/z/z/z/z/z/z/z/z/z/z/
+                },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,

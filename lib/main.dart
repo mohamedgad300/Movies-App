@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/Auth_Screen/repassword_screen.dart';
+import 'package:movies_app/core/Auth_Screen/signin_screen.dart';
 import 'package:movies_app/core/provider/my%20provider.dart';
 import 'package:movies_app/models/film_model.dart'; // إضافة هذا السطر
 import 'package:movies_app/screens/Film_details.dart'; // إضافة هذا السطر
@@ -23,7 +25,9 @@ final Map<String, Widget Function(BuildContext)> appRoutes = {
   "IntroFive": (context) => const Introfive(),
   "IntroSix": (context) => const Introsix(),
   LoginScreen.routeName: (context) => const LoginScreen(),
+  rePassword.routeName : (context) => rePassword(),
   HomeScreen.routeName: (context) => const HomeScreen(),
+  signin.routeName: (context) => signin(),
   FilmDetails.routeName: (context) => FilmDetails(
     film: ModalRoute.of(context)!.settings.arguments as FilmModel, // هنا تمرير الـ FilmModel
   ),
