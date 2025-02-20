@@ -5,7 +5,6 @@ import 'package:movies_app/screens/Home_screen/tabs/home_tab/horizontalListWidge
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
